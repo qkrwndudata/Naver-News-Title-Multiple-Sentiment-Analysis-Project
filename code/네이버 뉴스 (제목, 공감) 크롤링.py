@@ -71,7 +71,7 @@ for i in tqdm(range(0, number)):   # len(df['url'])
         driver.get(df['url'][i])
         time.sleep(1)
 
-        # 기사 데이터 수집
+        # 기사 제목 및 공감 데이터 수집
         title = driver.find_element_by_css_selector('.tts_head').text
         like = driver.find_element_by_css_selector(".end_btn .u_likeit_list.good .u_likeit_list_count._count").text
         warm = driver.find_element_by_css_selector(".end_btn .u_likeit_list.warm .u_likeit_list_count._count").text
@@ -80,7 +80,7 @@ for i in tqdm(range(0, number)):   # len(df['url'])
         want = driver.find_element_by_css_selector(".end_btn .u_likeit_list.want .u_likeit_list_count._count").text
 
 
-        # review 수집하기
+        # review 수집하기: 사용 x
         review_list = []
         overlays1 = ".u_cbox_text_wrap"
         reviews = driver.find_elements_by_css_selector(overlays1)
@@ -114,7 +114,7 @@ import pandas as pd
 result_df = pd.DataFrame.from_dict(dict, 'index')
 result_df
 
-result_df.to_csv("청원.csv")
+result_df.to_csv("청원.csv")   # 검색창에 '청원' 입력 후 관련 뉴스 기사 제목 및 공감 데이터 수집
 
 result = pd.read_csv('C:/Users/Park JuYoung/Desktop/KUBIG/NLP/청원.csv')
 
