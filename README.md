@@ -10,10 +10,16 @@
 - 다양한 분야의 뉴스 제목과 반응별 공감 수 크롤링 진행
 - 각 기사 제목 별 독자들의 공감을 라벨링 이후 최종 데이터셋 생성
 
+![image](https://user-images.githubusercontent.com/79184083/222937428-d887a4f9-6cd2-4e9e-8a27-5a32db296ec2.png)
+
+
 2. 데이터 전처리
 - 정규표현식을 사용한 불용어 제거
 - KONLP의 Okt를 사용한 토큰화
 - 단어 리스트를 벡터화한 이후 패딩 진행
+
+![image](https://user-images.githubusercontent.com/79184083/222937443-e3b28310-c113-4a5d-b02d-6e6c10825281.png)
+
 
 3. 모델링
 - 불균형 문제 해결: SMOTE / class weight / focal loss 성능 비교
