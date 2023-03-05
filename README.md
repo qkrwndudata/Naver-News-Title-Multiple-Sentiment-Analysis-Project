@@ -17,7 +17,7 @@
 
 3. 모델링
 - 불균형 문제 해결: SMOTE / class weight / focal loss 성능 비교
-- 6가지 모델 비교: LSTM / **KoBERT / ML(RF, SVM, NB, LR)
+- 6가지 모델 비교: LSTM / **KoBERT** / ML(RF, SVM, NB, LR)
 
 #### 💻 결과
 
